@@ -2,16 +2,16 @@
 
 const mongoose = require('mongoose');
 
-const MONGODB_URI = 'mongodb://localhost:27017/another_social_network_db';
-
+// derived to similar from project 3
+const mongoose = require('mongoose');
+require('dotenv').config();
 mongoose
-  .connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
+  .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/another_social_network_db')
+  .then(() => {
+    console.log('Connected to MongoDB database!');
   })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((err) => console.error('Error connecting to MongoDB:', err));
+  .catch((error) => {
+    console.error('Error connecting to MongoDB:', error);
+  });
 
 module.exports = mongoose.connection;
