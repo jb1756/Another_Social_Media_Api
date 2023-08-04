@@ -1,7 +1,4 @@
 //connection to your MongoDB database using Mongoose.
-
-const mongoose = require('mongoose');
-
 // derived to similar from project 3
 const mongoose = require('mongoose');
 require('dotenv').config();
