@@ -1,5 +1,5 @@
-const User = require('../models/User');
-const Thought = require('../models/Thought');
+const User = require('../models/Users');
+const Thought = require('../models/Thoughts');
 
 const userController = {
   // Controller function to get all users
