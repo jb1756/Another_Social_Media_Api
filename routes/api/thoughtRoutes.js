@@ -6,6 +6,7 @@ const thoughtController {
     createThought,
     updateThought,
     deleteThought,
+    createReaction,
 } = require('../../controllers/thoughtController');
 
 // GET all thoughts
